@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aor.numbers.ListDeduplicatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-03-10T12:05:24" hostname="DESKTOP-F4VOPTC" time="0.077">
+  <properties/>
+  <testcase name="deduplicate()" classname="com.aor.numbers.ListDeduplicatorTest" time="0.025"/>
+  <testcase name="deduplicate_bug()" classname="com.aor.numbers.ListDeduplicatorTest" time="0.046"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

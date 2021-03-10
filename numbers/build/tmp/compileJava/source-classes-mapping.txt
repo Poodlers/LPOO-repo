@@ -6,13 +6,13 @@ com/aor/numbers/IListDeduplicator.java
  com.aor.numbers.IListDeduplicator
 com/aor/numbers/ListSorter.java
  com.aor.numbers.ListSorter
-com/aor/numbers/ListAggregator.java
- com.aor.numbers.ListAggregator
+com/aor/numbers/PositiveFilter.java
+ com.aor.numbers.PositiveFilter
 com/aor/numbers/DivisibleByFilter.java
  com.aor.numbers.DivisibleByFilter
 com/aor/numbers/IListFilterer.java
  com.aor.numbers.IListFilterer
 com/aor/numbers/ListFilterer.java
  com.aor.numbers.ListFilterer
-com/aor/numbers/PositiveFilter.java
- com.aor.numbers.PositiveFilter
+com/aor/numbers/ListAggregator.java
+ com.aor.numbers.ListAggregator

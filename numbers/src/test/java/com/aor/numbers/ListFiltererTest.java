@@ -23,6 +23,7 @@ public class ListFiltererTest {
         list.add(-2);
         list.add(-4);
         list.add(2);
+        list.add(1);
         list.add(5);
         list.add(6);
 
@@ -30,11 +31,23 @@ public class ListFiltererTest {
     }
 
     @Test
+    public void PositiveFilterTestWith0(){
+        List<Integer> expected = Arrays.asList(new Integer[]{1,2});
+        List<Integer> list_test = Arrays.asList(new Integer[]{0,1,2,-3});
+        ListFilterer filterer = new ListFilterer(list_test);
+
+        List<Integer> filtered_list = filterer.filter(new PositiveFilter());
+
+        Assertions.assertEquals(expected,filtered_list);
+    }
+
+    @Test
     public void PositiveFilterTest(){
-        List<Integer> expected = Arrays.asList(new Integer[]{2,5,6});
+        List<Integer> expected = Arrays.asList(new Integer[]{2,1,5,6});
         ListFilterer filterer = new ListFilterer(list);
 
         //example stub for the PositiveStub
+        /*
         ListFiltererStub = Mockito.mock(IListFilterer.class);
         Mockito.when(ListFiltererStub.accept(2)).thenReturn(true);
         Mockito.when(ListFiltererStub.accept(5)).thenReturn(true);
@@ -42,11 +55,11 @@ public class ListFiltererTest {
         Mockito.when(ListFiltererStub.accept(-1)).thenReturn(false);
         Mockito.when(ListFiltererStub.accept(-2)).thenReturn(false);
         Mockito.when(ListFiltererStub.accept(-4)).thenReturn(false);
+        */
 
-
-        //List<Integer> filtered_list = filterer.filter(new PositiveFilter());
+        List<Integer> filtered_list = filterer.filter(new PositiveFilter());
         //using the stub instead
-        List<Integer> filtered_list = filterer.filter(ListFiltererStub);
+        //List<Integer> filtered_list = filterer.filter(ListFiltererStub);
         Assertions.assertEquals(expected,filtered_list);
     }
 
@@ -54,7 +67,7 @@ public class ListFiltererTest {
     public void DivisibleFilterTest(){
         List<Integer> expected = Arrays.asList(new Integer[]{-2,-4,2,6});
         ListFilterer filterer = new ListFilterer(list);
-
+        /*
         ListFiltererStub = Mockito.mock(IListFilterer.class);
         Mockito.when(ListFiltererStub.accept(2)).thenReturn(true);
         Mockito.when(ListFiltererStub.accept(5)).thenReturn(false);
@@ -62,10 +75,11 @@ public class ListFiltererTest {
         Mockito.when(ListFiltererStub.accept(-1)).thenReturn(false);
         Mockito.when(ListFiltererStub.accept(-2)).thenReturn(true);
         Mockito.when(ListFiltererStub.accept(-4)).thenReturn(true);
+        */
 
-        //List<Integer> filtered_list = filterer.filter(new DivisibleByFilter(2));
+        List<Integer> filtered_list = filterer.filter(new DivisibleByFilter(2));
         //using our stub
-        List<Integer> filtered_list = filterer.filter(ListFiltererStub);
+        //List<Integer> filtered_list = filterer.filter(ListFiltererStub);
 
         Assertions.assertEquals(expected,filtered_list);
     }

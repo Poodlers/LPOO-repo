@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.numbers.ListFiltererTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-10T11:30:44" hostname="DESKTOP-F4VOPTC" time="0.417">
+<testsuite name="com.aor.numbers.ListFiltererTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-03-10T12:05:24" hostname="DESKTOP-F4VOPTC" time="0.016">
   <properties/>
-  <testcase name="DivisibleFilterTest()" classname="com.aor.numbers.ListFiltererTest" time="0.417"/>
+  <testcase name="PositiveFilterTest()" classname="com.aor.numbers.ListFiltererTest" time="0.006"/>
+  <testcase name="PositiveFilterTestWith0()" classname="com.aor.numbers.ListFiltererTest" time="0.003"/>
+  <testcase name="DivisibleFilterTest()" classname="com.aor.numbers.ListFiltererTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

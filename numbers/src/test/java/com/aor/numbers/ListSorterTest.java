@@ -32,6 +32,8 @@ public class ListSorterTest {
         expected.add(7);
 
     }
+
+
     @Test
     public void sort() {
 
@@ -47,5 +49,24 @@ public class ListSorterTest {
         ListSorter sorter = new ListSorter(list_bugged);
         List<Integer> sorted = sorter.sort();
         Assertions.assertEquals(expected_bug, sorted);
+    }
+
+    @Test
+    public void testEquals(){
+        ListSorter sorter1 = new ListSorter(Arrays.asList(new Integer[]{1, 2, 4, 2}));
+        ListSorter sorter2 = new ListSorter(Arrays.asList(new Integer[]{1, 2, 4, 2,3}));
+        boolean isEqual = sorter1.equals(sorter2);
+        Assertions.assertEquals(isEqual,false);
+    }
+
+    @Test
+    public void testEqualsNull(){
+        ListSorter sorter1 = new ListSorter(Arrays.asList(new Integer[]{1, 2, 4, 2}));
+        boolean isEqual = sorter1.equals(sorter1);
+        Assertions.assertEquals(isEqual,true);
+
+        ListDeduplicator sorter3 = new ListDeduplicator(list);
+        isEqual = sorter1.equals(sorter3);
+        Assertions.assertEquals(isEqual,false);
     }
 }

@@ -46,12 +46,32 @@ public class ListAggregatorTest {
     }
 
     @Test
+    public void max_repeated() {
+        List<Integer> list_test = Arrays.asList(new Integer[]{1,2,4,5,5});
+        ListAggregator aggregator = new ListAggregator(list_test);
+
+        int max = aggregator.max();
+
+        Assertions.assertEquals(5, max);
+    }
+
+    @Test
     public void max_bug_7263(){
         List<Integer> expected = Arrays.asList(new Integer[]{-1,-4,-5});
         ListAggregator aggregator = new ListAggregator(expected);
 
         int max = aggregator.max();
         Assertions.assertEquals(-1, max);
+    }
+
+    @Test
+    public void min_repeated() {
+        List<Integer> list_test = Arrays.asList(new Integer[]{1,1,2,4,5,5});
+        ListAggregator aggregator = new ListAggregator(list_test);
+
+        int min = aggregator.min();
+
+        Assertions.assertEquals(1, min);
     }
     @Test
     public void min() {
