@@ -1,9 +1,9 @@
-com/aor/numbers/IListDeduplicator.java
- com.aor.numbers.IListDeduplicator
 com/aor/numbers/IListSorter.java
  com.aor.numbers.IListSorter
 com/aor/numbers/ListDeduplicator.java
  com.aor.numbers.ListDeduplicator
+com/aor/numbers/IListDeduplicator.java
+ com.aor.numbers.IListDeduplicator
 com/aor/numbers/ListSorter.java
  com.aor.numbers.ListSorter
 com/aor/numbers/ListAggregator.java
